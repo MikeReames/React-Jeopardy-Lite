@@ -6,6 +6,8 @@ import Contact from './components/Contact/Contact';
 import Navigation from './components/navigation/Navigation';
 import Error from './components/error/Error';
 import "./App.css";
+import Jeopardy from "./components/Jeopardy/Jeopardy";
+import statelessJeopardy from "./components/JeopardyDisplay/StatelessJeopardy";
 
 function App() {
   return (
@@ -20,7 +22,7 @@ function App() {
       exact
       path="/welcome/:name" 
       render={(props) => <Welcome {...props} name={props.match.params.name} />} />
-      
+      <Route exact path="/Jeopardy" component={Jeopardy} />
       <Route exact path="/clock" component={Clock} />
       <Route exact path="/contact" component={Contact} />
       <Route component={Error} />
